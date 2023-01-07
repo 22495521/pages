@@ -22,7 +22,7 @@
           </h1>
           <div class="col-8">
             <!-- @submit.prevent 取消submit預設送出 -->
-            <form id="form" class="form-signin"  @submit.prevent>
+            <form id="form" class="form-signin"  @submit.prevent="login">
               <div class="form-floating mb-3">
                 <input type="email" class="form-control" id="username" v-model="userType.username"
                   placeholder="name@example.com" required autofocus>

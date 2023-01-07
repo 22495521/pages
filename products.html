@@ -48,7 +48,7 @@
                     </td>
                     <td width="150">
                       <span class="text-success" v-if="item.is_enabled">啟用</span>
-                      <span v-if="item.is_enable">未啟用</span>
+                      <span v-else>未啟用</span>
                     </td>
                     <td width="120">
                       <button type="button" class="btn btn-primary" @click="seeContent(item)">查看細節</button>
@@ -81,7 +81,7 @@
                   <img :src="img" :alt="`img${key}`" class="images m-2">
                 </template>
               </template>
-              <p class="text-secondary" v-if="!productsContent.title">請選擇一個商品查看</p>
+              <p class="text-secondary" v-else>請選擇一個商品查看</p>
             </div>
           </div>
         </div>
