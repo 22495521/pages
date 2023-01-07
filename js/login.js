@@ -11,13 +11,9 @@ const app = Vue.createApp({
     },
     methods:{
         login(){
-            const {username, password} = this.userType;
-            const user ={
-                "username": username,
-                "password": password,
-            };
+
             const url='https://vue3-course-api.hexschool.io/v2';
-            axios.post(`${url}/admin/signin`, user)
+            axios.post(`${url}/admin/signin`, this.userType)
                 .then((res)=>{
                     const {token,expired} = res.data
                     //存入cookie
